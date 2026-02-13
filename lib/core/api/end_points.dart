@@ -1,5 +1,6 @@
 class EndPoints {
 
-  static const String getAllCategories = ' ';
+  static const String goldEndpoint = 'XAU';
+  static const String silverEndpoint = 'XAG';
 
 }

@@ -1,3 +1,3 @@
 class ApiConstants {
-  static const String baseUrl = ' ';
+  static const String baseUrl = 'https://api.gold-api.com/price/';
 }

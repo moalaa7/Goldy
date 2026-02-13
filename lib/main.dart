@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:goldy/core/api/api_manager.dart';
 import 'package:goldy/core/utils/app_routes.dart';
+import 'package:goldy/feature/gold/persentation/screens/gold_screen.dart';
+import 'package:goldy/feature/silver/persentation/screens/silver_screen.dart';
 
 import 'feature/home/home_screen.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ApiManager.init();
   runApp(const MyApp());
 }
 
@@ -25,6 +30,9 @@ class MyApp extends StatelessWidget {
           routes: {
 
             AppRoutes.homeRoute: (context) => const HomeScreen(),
+            AppRoutes.goldRoute: (context) => const GoldScreen(),
+            AppRoutes.silverRoute: (context) => const SilverScreen(),
+
           },
 
         );
